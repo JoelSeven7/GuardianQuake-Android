@@ -5,32 +5,6 @@ acelerometro del telefono, y se conecta al backend GuardianQuake
 (FastAPI + MySQL) para todo lo que sí tiene sentido llevar a la nube:
 historial, contenido educativo, sensibilidad sincronizada y suscripcion Pro.
 
-## ⚠️ Antes de abrir el proyecto — limitaciones que debes conocer
-
-Este proyecto fue escrito completo, pero **no pude compilarlo ni
-ejecutarlo yo mismo**: mi entorno de trabajo no tiene acceso a los
-repositorios de Google Maven / Maven Central que Android Studio necesita
-para descargar Gradle, el Android Gradle Plugin y las librerías. Con el
-backend en Python sí pude instalar todo y probarlo en vivo; con Android
-esa parte te toca a ti, en tu máquina, dentro de Android Studio.
-
-Esto significa dos cosas concretas:
-
-1. **Es probable que la primera vez que abras el proyecto, Android Studio
-   tarde varios minutos sincronizando Gradle** (descarga el AGP, Kotlin,
-   Compose, todas las dependencias). Es normal, déjalo terminar.
-2. **Si algo no compila a la primera**, es probablemente un detalle de
-   versión (a veces Google actualiza algo y una versión que yo fijé ya
-   quedó obsoleta). Cópiame el error exacto del panel "Build" y lo
-   arreglamos — no es razón para pensar que el proyecto está mal
-   estructurado, solo son ajustes de versión que se resuelven rápido.
-3. **La lógica de deteccion del acelerómetro no se puede simular** en
-   un emulador estándar de forma realista. Puedes probar que la UI y el
-   servicio arrancan, pero para afinar el umbral de sensibilidad vas a
-   necesitar un teléfono físico (agitarlo) o el panel de sensores
-   virtuales del emulador de Android Studio (Extended Controls → Virtual
-   sensors → Accelerometer).
-
 ## 1. Requisitos
 
 - **Android Studio** Koala o más reciente
