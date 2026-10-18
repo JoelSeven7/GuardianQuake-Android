@@ -9,9 +9,8 @@ historial, contenido educativo, sensibilidad sincronizada y suscripcion Pro.
 
 - **Android Studio** Koala o más reciente
 - **JDK 17** (Android Studio ya trae uno embebido normalmente)
-- El **backend GuardianQuake** corriendo (ver el otro proyecto que te
-  entregué, `guardianquake_backend`) — con `uvicorn app.main:app --host
-  0.0.0.0 --port 8000`
+- El **backend GuardianQuake** corriendo (ver el otro proyecto que subí, `GuardianQuake-API`) — con `uvicorn app.main:app --host
+  0.0.0.0 --port 8001`
 
 ## 2. Cómo abrir el proyecto
 
@@ -26,7 +25,7 @@ historial, contenido educativo, sensibilidad sincronizada y suscripcion Pro.
 La app apunta por defecto a:
 
 ```kotlin
-buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8000/\"")
+buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8001/\"")
 ```
 
 `10.0.2.2` es la IP especial que usa el **emulador** de Android Studio
@@ -46,7 +45,7 @@ Este valor está en `app/build.gradle.kts`, dentro de `defaultConfig`.
 ```bash
 cd guardianquake_backend
 source venv/bin/activate
-uvicorn app.main:app --host 0.0.0.0 --port 8000
+uvicorn app.main:app --host 0.0.0.0 --port 8001
 ```
 
 Con el backend arriba, corre la app desde Android Studio (▶ Run).
